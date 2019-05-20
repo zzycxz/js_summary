@@ -127,6 +127,8 @@ git merge 分支名 合谁放谁  fast-forward
 ```
 git remote add origin 'git地址' 添加一个远程仓库
 git remote -v 显示远程仓库信息，会显示fetch代码地址和push代码地址
+git remote rm  名字  删除名字关联
+git push origin master 推送当前的分支
 ```
 
 ## 另附：基础linux命令
