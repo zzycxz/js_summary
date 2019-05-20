@@ -35,7 +35,23 @@ git config --global user.email “youremail”
 - 不要在文件夹里初始化，一个项目初始化一次，不能嵌套着来
 ```
 git init 告诉git哪个文件夹被git所管理
+git status 查看git状态
 ```
+### 四、删除暂存区
+```
+git rm --cached . -r 递归形式删除暂存区
+```
+### 五、添加到暂存区
+```
+git add ./ -A / 文件名
+```
+### 六、提交历史区
+```
+git commit -m "消息" 提交到历史区，必须后跟着信息
+
+git log 得到提交的版本号，作者，日期
+```
+
 ## 另附：基础linux命令
 - pwd print working directory
 - rm -rf ‘文件名’ 所有的文件夹中的递归 贼好用，建议加*
