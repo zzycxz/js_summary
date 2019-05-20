@@ -51,7 +51,31 @@ git commit -m "消息" 提交到历史区，必须后跟着信息
 
 git log 得到提交的版本号，作者，日期
 ```
+### 七、git的对比
+- git diff 工作区和暂存区
+- git diff 分之名 工作区和历史区
+- git diff --catched 暂存区和历史区比较
 
+### 八、暂存区回滚操作
+- 从暂存区中将工作区内容覆盖掉
+```
+git checkout 文件名  暂存区中将工作区内容覆盖掉
+
+git reset HEAD 文件名 / 。  暂存区网上回滚一次
+```
+
+### 历史区回滚找版本号
+```
+git log 得到版本号
+
+git reset --hard 版本号  直接把工作区和暂存区回滚到版本号版本
+
+git reflog 打出所有的日志 用此命令找到所有版本号，包括回滚回去后的时间点之后的
+
+然后重新git reset --hard 版本号
+
+git reset --haed HEAD^ 回到上一个版本
+```
 ## 另附：基础linux命令
 - pwd print working directory
 - rm -rf ‘文件名’ 所有的文件夹中的递归 贼好用，建议加*
