@@ -123,13 +123,44 @@ git merge 分支名 合谁放谁  fast-forward
 - 4、git不会上传一个空文件夹，添加.gitkeep在空文件夹中
 - 5、正常的git提交
 - 6、线上建立一个仓库
-- 7、如下
+- 7、关联和推送如下
 ```
 git remote add origin 'git地址' 添加一个远程仓库
 git remote -v 显示远程仓库信息，会显示fetch代码地址和push代码地址
 git remote rm  名字  删除名字关联
 git push origin master 推送当前的分支
 ```
+
+### 十七、线上修改后版本不一致
+- 如果在github上修改了代码，之后应该先拉取下线上的代码再次提交
+```
+git pull origin master
+```
+### 十八、gh-pages分支来发布我们的静态页
+- 在项目中和创建一个gh-pages的分支
+- 将分支提到线上仓库
+- 找到提供给你的网站 settings github-pages
+```
+git checkout -b gh-pages
+touch index.html
+git add .
+git commit -m 'xxx'
+git push origin gh-pages
+```
+### 十九 拉取本地
+```
+git clone 项目地址 项目别名
+```
+> 默认就是git仓库而且有origin地址，可以将代码提交到自己的仓库上
+> 只有fork关系才能发送pull request请求
+## issue问题
+- 可以提交对项目的质疑，自己的信息
+
+## 更改其他人代码
+- 1、通过fork然后pull，request请求
+- 2、通过collaborators，添加贡献者，被添加的人拥有最大权限
+
+## GUI界面化
 
 ## 另附：基础linux命令
 - pwd print working directory
@@ -142,3 +173,4 @@ git push origin master 推送当前的分支
 - cat 文件名 显示文件内容
 - vi 文件名 i插入模式 esc 退出编辑模式 :q!强制推出  :wq! 保存并退出
 - echo '内容' > "文件名" 将内容写入到文件中，>>号为追加内容  如果文件不存在自动创建
+- mv '文件名' '地址' 将文件移动到指定地址
